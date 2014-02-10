@@ -25,24 +25,24 @@ for(var i=0; i<gridSize; i++) {
 
 function gridPrompt()
 {
-
     gridSize=prompt("Please enter desired grid size");
+
     for(var i=0; i<gridSize; i++) {
         grid[i] = [];
-        for(var j=0; j<gridSize; j++) {
-            grid[i][j] = undefined;
-        }
-    }
-
-    for(var i=0; i<gridSize; i++) {
         newGrid[i] = [];
         for(var j=0; j<gridSize; j++) {
+            grid[i][j] = undefined;
             newGrid[i][j] = undefined;
         }
     }
 
+   /* for(var i=0; i<gridSize; i++) {
+        newGrid[i] = [];
+        for(var j=0; j<gridSize; j++) {
+            newGrid[i][j] = undefined;
+        }
+    }*/
     reset();
-
 }
 
 function delayPrompt()
