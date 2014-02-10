@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Game of Life</title>
+</head>
+<body>
+<script src="Engine.js"></script>
+<script>
+    init();
+    grid[5][4].cellState="live";
+    grid[5][5].cellState="live";
+    grid[5][6].cellState="live";
+    grid[5][7].cellState="live";
+    grid[5][8].cellState="live";
+
+    grid[5][9].cellState="live";
+    grid[6][6].cellState="live";
+    grid[7][7].cellState="live";
+    grid[7][8].cellState="live";
+    grid[6][7].cellState="live";
+</script>
+
+<div id="Settings" style="background-color:#FFD700;height:500px;width:100px;float:left;">
+    <b>Settings</b><br />
+    <button onclick="gridPrompt()">Grid Size</button><br />
+    <button onclick="delayPrompt()">Delay</button><br />
+    <button onclick="reset()">Reset</button><br />
+</div>
+
+<div id="Grid" style= "background-color:#FFD700;height:500px;width:1000px;float:left;">
+
+    <script>
+        printGrid(grid);
+    </script>
+</div>
+
+<div id="Actions" style="background-color:#FFD700;height:500px;width:100px;float:left;">
+    <b>Actions</b><br />
+    <button onclick="start()">Start</button><br />
+    <button onclick="step()">Step</button><br />
+    <button onclick="stop()">Stop</button><br />
+</div>
+</body>
+</html>
