@@ -4,6 +4,7 @@
 var gridSize=20;
 var delay=1000;
 var timer;
+var counter=0;
 
 grid = [];
 for(var i=0; i<gridSize; i++) {
@@ -42,14 +43,11 @@ function gridPrompt()
 
     reset();
 
-
 }
 
 function delayPrompt()
 {
-
     delay=prompt("Please enter desired delay");
-
 }
 
 function gridSetup(gridParam){
@@ -114,7 +112,9 @@ function countLiveNeighbours(posX,posY){
 }
 
 function step(){
-
+    counter++;
+    var element = document.getElementById("Status");
+    element.innerHTML ="Generation number:  " +counter;
     for(var i=0;i<gridSize;i++){
         for(var j=0;j<gridSize;j++){
             action(grid[i][j]);
@@ -169,6 +169,7 @@ function init(){
 }
 
 function reset(){
+    counter=0;
     stop();
     init();
     printGrid(grid);
