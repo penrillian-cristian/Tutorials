@@ -177,16 +177,3 @@ function reset(){
     init();
     printGrid(grid);
 }
-
-function images(){
-    for(var i =0;i<gridSize;i++){
-        for(var j =0;j<gridSize;j++){
-            if(grid[i][j].cellState=="dead"){
-                grid[i][j].cellState=0;
-            }
-            else{
-                grid[i][j].cellState=1;
-            }
-        }
-    }
-}
