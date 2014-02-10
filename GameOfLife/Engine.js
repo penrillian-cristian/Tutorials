@@ -7,20 +7,23 @@ var timer;
 var counter=0;
 
 grid = [];
+newGrid = [];
 for(var i=0; i<gridSize; i++) {
     grid[i] = [];
+    newGrid[i] = [];
     for(var j=0; j<gridSize; j++) {
         grid[i][j] = undefined;
+        newGrid[i][j] = undefined;
     }
 }
 
-newGrid = [];
+/*newGrid = [];
 for(var i=0; i<gridSize; i++) {
     newGrid[i] = [];
     for(var j=0; j<gridSize; j++) {
         newGrid[i][j] = undefined;
     }
-}
+}*/
 
 
 function gridPrompt()
